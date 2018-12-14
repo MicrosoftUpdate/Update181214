@@ -1,7 +1,7 @@
 $instance = Get-CimInstance Win32_Process -Filter "ProcessId = '$pid'"
-
+$pid
 $powershellid = $instance.ParentProcessId
-
+$powershellid
 $killid = $null
 
 $killid = $powershellid
